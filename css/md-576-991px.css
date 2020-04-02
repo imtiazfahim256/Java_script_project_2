@@ -1,0 +1,29 @@
+
+
+
+@media (min-width: 576px) and (max-width: 991px) {
+    .hide{
+        display: none;
+    }
+    main{
+        width: 97%;
+    }
+    /* video fixed size start  */
+    #myVideo{
+        width: auto;
+        height: 100%;
+    }
+
+     /* video fixed end start  */
+     .image1{
+        
+        height: 70vh ;
+        
+      
+        
+      }
+    
+
+
+    
+}

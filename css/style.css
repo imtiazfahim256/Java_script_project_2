@@ -1,0 +1,35 @@
+
+@import url('https://fonts.googleapis.com/css?family=Baloo+Bhai+2|New+Rocker|Playfair+Display|Simonetta&display=swap');
+
+html,body{
+    width: 100%;
+    height: 100%;
+   width: 100%;
+   height: 100%;
+  
+    padding: 0;
+    
+   
+}
+#dom{
+    animation: ani 0.5s 1;
+}
+#dom1{
+    animation: ani1 0.5s 1;
+}
+@keyframes ani {
+  
+    100%{
+       transform: rotate(180deg);
+    }
+}
+@keyframes ani1 {
+  
+    100%{
+       transform: rotate(260deg);
+    }
+}
+.active{
+    color:green;
+    background:linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
+}

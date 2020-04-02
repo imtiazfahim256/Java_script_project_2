@@ -1,0 +1,34 @@
+html,body{
+    height: 100%;
+    width: 100%;
+    font-family:  sans-serif;
+}
+
+.row-bg{
+    background:linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),url('./../Screenshot_2017-10-14-00-56-53.png');
+    
+    background-size:cover;
+    width: 100%;
+    height: 50vh;
+    
+}
+.btn-right{
+    border-top-right-radius: 0px !important;
+    border-bottom-right-radius: 0px !important;
+}
+.btn-left{
+    border-top-left-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+}
+.active{
+    animation: ani 0.1s 1;
+    
+}
+@keyframes ani{
+    100%{
+        transform: translate(180px);
+    }
+}
+input{
+    border-radius: 50%;
+}

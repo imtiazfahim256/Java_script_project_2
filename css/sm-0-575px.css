@@ -1,0 +1,28 @@
+@media (min-width: 0px) and (max-width: 575px) {
+
+
+ /* video fixed size start  */
+    #myVideo{
+        width: auto;
+        height: 100%;
+    }
+    main{
+        width: 96%;
+    }
+     /* video fixed end start  */
+
+
+     .image1{
+        
+        height: 50vh ;
+        
+      
+        
+      }
+      .hide{
+          display: none;
+      }
+      .no-hide{
+          display: block;
+      }
+}
