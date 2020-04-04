@@ -1,4 +1,10 @@
+
+
+
+
 var alldata={
+
+
     eventdata:
     {
         click1:'click1',
@@ -9,9 +15,46 @@ var alldata={
         type1:'#type1',
         input1:'#input1',
         input2:'#input2'
-    }
+    },
+    bg:
+    {
+        dark:'bg-dark',
+        light:'bg-light',
+        yellow:'yellow',
+        red:'red',
+        blue:'blue'
+
+    },
+    textcolor:
+    {
+        dark:'text-dark',
+        light:'text-light',
+        yellow:'text-warning',
+        red:'text-danger',
+        green:'text-success',
+        blue:'text-info'
+    },
+    listcolor:[
+        'list-group-item-success',
+        'list-group-item-danger',
+        'list-group-item-info',
+        'list-group-item-primary',
+        'list-group-item-warning'
+
+    ]
+
+
 
 }
+
+
+
+
+
+
+
+
+
 
 var d=function(a,b,c){
     this.a=type1;
@@ -30,6 +73,9 @@ var d=function(a,b,c){
 
 
 var sa=function(){
+    var random=Math.floor(Math.random()*4);
+
+   
 
     var type1=document.querySelector(alldata.domdata.type1).value;
     console.log(type1);
@@ -39,7 +85,7 @@ var sa=function(){
     var intinput=parseInt(input2);
 
     if(type1==='exp'){
-        document.querySelector('.exp').insertAdjacentHTML('beforebegin','<li id="list1"class="v list-group-item d-flex justify-content-between align-items-center list-group-item-success font-size-sm-13">'+input1+'<span class="badge badge-primary badge-pill">'+input2+' TK</span><i class="fas fa-window-close" id="close1"></i></li><br>');
+        document.querySelector('.exp').insertAdjacentHTML('beforebegin','<li id="list1"class="v list-group-item d-flex justify-content-between align-items-center '+alldata.listcolor[random]+' font-size-sm-13">'+input1+'<span class="badge badge-primary badge-pill">'+input2+' TK</span><i class="fas fa-window-close close" id="close1">f</i></li><br>');
           total+=intinput;
           console.log(total);
           
@@ -50,7 +96,7 @@ var sa=function(){
 
     }
     else{
-        document.querySelector('.inc').insertAdjacentHTML('beforebegin','<li id="list1"class="v list-group-item d-flex justify-content-between align-items-center list-group-item-warning font-size-sm-13">'+input1+'<span class="badge badge-primary badge-pill">'+input2+' TK</span><i class="fas fa-window-close" id="close1"></i></li><br>');
+        document.querySelector('.inc').insertAdjacentHTML('beforebegin','<li id="list1"class="v list-group-item d-flex justify-content-between align-items-center '+alldata.listcolor[random]+' font-size-sm-13">'+input1+'<span class="badge badge-primary badge-pill">'+input2+' TK</span><i class="fas fa-window-close" id="close1"></i></li><br>');
         totalinc+=intinput;
         console.log(totalinc);
         
@@ -60,9 +106,10 @@ var sa=function(){
         
         
     }
+    clickevent();
     var sd=total-totalinc;
     document.querySelector('.sd').textContent=' income '+total+' Total Cost '+ totalinc +' you have Now '+sd;
-    
+   
 }
 
 
@@ -70,7 +117,7 @@ var sa=function(){
    document.getElementById(alldata.eventdata.click1).addEventListener('click',function(){
    
   sa();
-
+  
  });
 //key bord event call here
  document.addEventListener('keypress', function (event) {
@@ -80,4 +127,20 @@ var sa=function(){
         
     }
 });
+
+
+var clickevent=function(){
+    var closebtns = document.getElementsByClassName("close");
+    for (i = 0; i < closebtns.length; i++) {
+        console.log(closebtns[i]);
+        
+        closebtns[i].addEventListener("click", function() {
+        this.parentElement.style.display = 'none';
+      });
+      };
+}
     
+
+
+
+
