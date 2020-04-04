@@ -85,7 +85,7 @@ var sa=function(){
     var intinput=parseInt(input2);
 
     if(type1==='exp'){
-        document.querySelector('.exp').insertAdjacentHTML('beforebegin','<li id="list1"class="v list-group-item d-flex justify-content-between align-items-center '+alldata.listcolor[random]+' font-size-sm-13">'+input1+'<span class="badge badge-primary badge-pill">'+input2+' TK</span><i class="fas fa-window-close close" id="close1">f</i></li><br>');
+        document.querySelector('.exp').insertAdjacentHTML('beforebegin','<li id="list1"class="v list-group-item d-flex justify-content-between align-items-center '+alldata.listcolor[random]+' font-size-sm-13">'+input1+'<span class="badge badge-primary badge-pill">'+input2+' TK</span><i class="fas fa-window-close close" id="close1"></i></li><br>');
           total+=intinput;
           console.log(total);
           
